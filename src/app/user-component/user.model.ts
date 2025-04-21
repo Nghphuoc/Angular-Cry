@@ -1,5 +1,6 @@
 
 export class User {
+    
     name: string;
     email: string;
     age: number;
@@ -9,6 +10,7 @@ export class User {
     static age: any;
     static address: any;
     static phone: any;
+
     constructor(name: string, email: string, age: number, address: string, phone: string) {
         this.name = name;
         this.email = email;

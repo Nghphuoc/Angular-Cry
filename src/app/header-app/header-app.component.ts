@@ -1,6 +1,6 @@
 import { Component, EventEmitter, HostListener, Output, Directive, ElementRef, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { User } from '../user-component/user.model'; // Đường dẫn đến file user.model.ts
+import { User } from '../user-component/user.model';
 @Component({
   selector: 'app-header-app',
   standalone: true,
@@ -10,9 +10,7 @@ import { User } from '../user-component/user.model'; // Đường dẫn đến f
 
 export class HeaderAppComponent {
   @Output() dataChange = new EventEmitter<any>();
-  @Input({required: true}) user : any; // Đường dẫn đến file user.model.ts
-  
-  constructor() { }
+  @Input({required: true}) user : any; // Dữ liệu người dùng từ component cha
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event) {
