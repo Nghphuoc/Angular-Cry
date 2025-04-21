@@ -5,16 +5,10 @@ import { HeaderAppComponent } from "./header-app/header-app.component";
 
 @Component({
   selector: 'app-root',
-  imports: [UserComponentComponent, HeaderAppComponent],
+  imports: [UserComponentComponent],
   templateUrl: './app.component.html',
 })
 export class AppComponent {
   title = 'app-angular';
   userData: any;  // Đây là nơi chứa dữ liệu người dùng
-
-  // Hàm nhận dữ liệu từ UserComponentComponent
-  onDataChange(data: any) {
-    this.userData = data;
-    console.log('Received user data in AppComponent:', this.userData);
-  }
 }
